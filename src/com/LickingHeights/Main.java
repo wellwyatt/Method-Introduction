@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        String userName;
+        String userName, wordA, wordB;
         Scanner keyboard;
         keyboard = new Scanner(System.in);
         double number1, number2;
@@ -18,8 +18,13 @@ public class Main {
         System.out.println("Give me another number.");
         number2 = keyboard.nextInt();
         System.out.println(division(number1, number2));
-        System.out.println(multiplication(number1,number2));
-
+        System.out.println(multiplication(number1, number2));
+        keyboard.nextLine();
+        System.out.println("Give me one word");
+        wordA = keyboard.nextLine();
+        System.out.println("Give me another");
+        wordB = keyboard.nextLine();
+        System.out.println(wordFlip(wordA, wordB));
     }
 
     public static void printGreetings(String userName) {
@@ -34,14 +39,21 @@ public class Main {
 
 
     public static double division(double numberA, double numberB) {
+        System.out.print("The first number divided by the second number = ");
         return numberA / numberB;
     }
-    public static double multiplication(double numberC, double numberD){
 
-
-        return numberC*numberD;
+    public static double multiplication(double numberA, double numberB) {
+        System.out.print("The first number times the second number = ");
+        return numberA * numberB;
     }
 
+    public static String wordFlip(String wordA, String wordB) {
+        System.out.println("The words flipped are ");
+        return (wordB + " " + wordA);
+
+
+    }
 }
 
 
